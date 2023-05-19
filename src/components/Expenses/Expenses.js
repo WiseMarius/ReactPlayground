@@ -11,8 +11,6 @@ function Expenses(props) {
     return expense.date.getFullYear() === parseInt(selectedYear);
   });
 
-  console.log(expensesToDisplay);
-
   const onYearChangedHandler = (event) => {
     setSelectedYear(event.target.value);
   };
