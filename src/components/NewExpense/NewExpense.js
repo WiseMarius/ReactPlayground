@@ -2,10 +2,14 @@ import React from "react";
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
-function NewExpense() {
+function NewExpense(props) {
+  const onSubmitExpenseHandler = (enteredExpenseData) => {
+    props.onAddExpense(enteredExpenseData);
+  };
+
   return (
     <div className="new-expense">
-      <ExpenseForm />
+      <ExpenseForm submitExpense={onSubmitExpenseHandler} />
     </div>
   );
 }

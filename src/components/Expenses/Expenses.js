@@ -9,7 +9,7 @@ function Expenses(props) {
     setSelectedYear(event.target.value);
   }
 
-  console.log(selectedYear)
+  console.log(props.expenses)
 
   return (
     <div>
@@ -17,7 +17,7 @@ function Expenses(props) {
       <div className="expenses">
         {props.expenses.map((expense) => (
           <ExpenseItem
-            key={Math.random()}
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
