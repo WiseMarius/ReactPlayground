@@ -28,8 +28,6 @@ function ExpenseForm(props) {
       date: new Date(date),
     };
 
-    console.log(expenseData);
-
     props.submitExpense(expenseData);
 
     setTitle("");
