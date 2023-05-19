@@ -1,20 +1,20 @@
 import ExpensesFilter from "./ExpensesFilter";
 import ExpenseItem from "./ExpenseItem";
+import Card from "../UI/Card";
 import { useState } from "react";
+import "./Expenses.css";
 
 function Expenses(props) {
   const [selectedYear, setSelectedYear] = useState();
 
   const onYearChangedHandler = (event) => {
     setSelectedYear(event.target.value);
-  }
-
-  console.log(props.expenses)
+  };
 
   return (
     <div>
-      <ExpensesFilter onYearChanged={onYearChangedHandler}/>
-      <div className="expenses">
+      <Card className="expenses">
+        <ExpensesFilter onYearChanged={onYearChangedHandler} />
         {props.expenses.map((expense) => (
           <ExpenseItem
             key={expense.id}
@@ -23,7 +23,7 @@ function Expenses(props) {
             date={expense.date}
           />
         ))}
-      </div>
+      </Card>
     </div>
   );
 }
