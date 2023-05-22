@@ -20,11 +20,9 @@ function NewExpense(props) {
   };
 
   const addNewExpenseButton = (
-    <div className="new-expense__actions">
-      <button type="submit" onClick={onAddNewExpenseHandler}>
-        Add New Expense
-      </button>
-    </div>
+    <button type="submit" onClick={onAddNewExpenseHandler}>
+      Add New Expense
+    </button>
   );
 
   return (
