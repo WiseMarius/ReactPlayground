@@ -1,13 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import SimpleInput from "./components/SimpleInput";
+import Ingredients from './components/Ingredients/Ingredients';
 
-function App() {
-  return (
-    <div className="app">
-      <SimpleInput />
-    </div>
-  );
-}
+const App = props => {
+  return <Ingredients />;
+};
 
 export default App;
